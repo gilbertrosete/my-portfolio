@@ -1,0 +1,990 @@
+:root {
+    --title-font: 'Oswald', sans-serif;
+    --content-font: 'Work Sans', sans-serif;
+    --main-color: #1e2224;
+    --secondary-color: #e2a93b;
+    --tertiary-color: #dddddd;
+    --text-uppercase: uppercase;
+    --p-container: 80px 60px;
+    
+}
+
+/* Global styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    font-size: 1em;
+    color: var(--tertiary-color);
+}
+
+.global-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p-container {
+    padding: var(--p-container);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Container Styling */
+/*
+/*
+/*
+/*header styling */
+.header-container {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    position: fixed;
+    align-items: center;
+    background-color: var(--main-color);
+    z-index: 2;
+}
+/* logo styling */
+.header-container .logo-container  { 
+    flex-grow: 1;
+    padding-left: 80px;
+}
+
+.header-container .logo-container a { 
+    color: var(--tertiary-color);
+    font-family: var(--content-font);
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 4px;
+}
+
+.header-container .logo-container span { 
+    color: var(--secondary-color);
+}
+
+/* navigation styling */
+.nav-container ul { 
+    flex-grow: 1;
+    display: flex;
+    float: right;
+    list-style: none;
+}
+
+.nav-container ul li { 
+    margin-left: 30px;
+    text-transform: var(--text-uppercase);
+    font-family: var(--title-font);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nav-container ul li a { 
+    transition: .3s all ease-in-out;
+    color: var(--tertiary-color);
+}
+
+.nav-container ul li a:hover { 
+    color: var(--secondary-color);
+}
+
+
+
+.nav-container ul li .nav-item-active { 
+    color: var(--secondary-color);
+}
+
+.nav-container ul li .slanted-background  {
+    clip-path: polygon(22% 0, 100% 0%, 100% 100%, 3% 99%);
+    background-color: var(--secondary-color);
+    padding: 10px 60px 10px 90px;
+}
+
+.nav-container ul li:last-child a:hover { 
+    color: var(--main-color);
+}
+
+.nav-container ul li .slanted-background  { 
+    color: var(--main-color);
+} /* end of header styling */
+
+.hero-container { 
+    width: 100%;
+    height: 100vh;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-image: url('img/triangular\ bg.svg');
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: right bottom;
+    position: fixed;
+}
+
+.hero-container .global-container { 
+    display: flex;
+    align-items: center;
+}
+
+.hero-container .global-container .text-container { 
+    width: 60%;
+    padding-right: 40px;
+}
+
+.hero-container .global-container .text-container .text-line { 
+    border: 4px solid var(--secondary-color);
+    border-left: none;
+    width: 100%;
+    height: 100%;  
+    position: relative;
+}
+
+.hero-container .global-container .text-container .text-line:before { 
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: -4;
+    left: -76;
+    width: 8%;
+    background-color: var(--secondary-color);
+}
+
+.hero-container .global-container .text-container .first-text  { 
+    font-size: 2.2em;
+    font-weight: 300;
+    font-family: var(--content-font);
+    text-transform: var(--text-uppercase);
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-top: -20px;
+    background-color: var(--main-color);
+}
+
+.hero-container .global-container .text-container .text-line .first-text {
+   width: 451px;
+}
+
+.hero-container .global-container .text-container .second-text { 
+    font-size: 3.3em;
+    font-weight: 800;
+    font-family: var(--content-font);
+    text-transform: var(--text-uppercase);
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-container .global-container .text-container .second-text span { 
+    color: var(--secondary-color);
+}
+
+.hero-container .global-container .text-container .third-text { 
+    font-size: 1em;
+    font-weight: 600;
+    font-family: var(--content-font);
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    line-height: 2;
+}
+.hero-container .global-container .text-container .text-line .main-btn   { 
+    background-color: var(--main-color);
+    width: 220px;
+    padding-right: 15px;
+    margin-bottom: -30px;
+    margin-top: 30px;
+}
+
+.hero-container .global-container .text-container .main-btn a  {
+    width: 100%; 
+    display: block;
+    padding: 15px;
+    border: 4px solid var(--secondary-color);
+    letter-spacing: 4px;
+    background-color: var(--secondary-color);
+    font-weight: 800;
+    font-family: var(--content-font);
+    color: var(--main-color);
+    text-align: center;
+    transition: .3s all ease-out;
+}
+
+.hero-container .global-container .text-container .main-btn a:hover { 
+    background-color: var(--main-color);
+    color: var(--secondary-color);   
+}
+
+.hero-container .global-container .heroImg-container { 
+    display: block;
+    position: relative;
+    width: 40%;
+    padding-left: 40px;
+}
+
+.hero-container .global-container .heroImg-container img { 
+    width: 100%;
+    float: right;
+}
+
+.hero-container .icon-row { 
+    display: flex;
+    position: relative;
+    margin-top: 70px;
+}
+
+.hero-container .global-container .dpdown-container { 
+    width: 50%;
+}
+
+.hero-container .global-container .dpdown-container .scrollBtn i { 
+    position: absolute;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    font-size: 24px;
+    left: 0;
+}
+
+.hero-container .global-container .socIcons-container { 
+    width: 50%;
+}
+
+.hero-container .global-container .socIcons-container .icon-container {
+    position: absolute;
+    right: 0;
+}
+
+.hero-container .global-container .socIcons-container .icon-container i { 
+    margin:3px;
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+/* end of hero container styling */
+
+/* start of about styling */
+#abt-container { 
+    width: 100%;
+    height: auto;
+    padding-top: 160px;
+    position: relative;
+    top: 100%;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+#abt-container .global-container { 
+    display: flex;
+}
+/* left column styling */
+#abt-container .global-container .col-left { 
+    width: 50%;
+    padding-right: 20px;
+}
+
+#abt-container .global-container .col-left .col-img { 
+    width: 90%;
+    border: 14px solid var(--secondary-color);
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+#abt-container .global-container .col-left img {
+    width: 110%; 
+    background-color: var(--main-color);
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-top: -60px;
+    margin-right: -60px;
+}
+
+/* right column styling */
+#abt-container .global-container .col-right { 
+    width: 50%;
+    padding-left: 20px;
+}
+
+#abt-container .global-container .col-right .abt-title h1 { 
+    font-size: 3em;
+    font-weight: 800;
+    font-family: var(--title-font);
+    text-transform: var(--text-uppercase);
+    color: var(--secondary-color);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+#abt-container .global-container .col-right .abt-title h1 span { 
+    color: var(--tertiary-color);
+}
+
+#abt-container .global-container .col-right .abt-title p { 
+    font-size: 1.9em;
+    font-weight: 500;
+    font-family: var(--content-font);
+    margin-bottom: 30px;
+}
+
+#abt-container .global-container .col-right .text-box { 
+    border: 4px solid var(--secondary-color);
+    border-right: none;
+    position: relative;
+}
+
+#abt-container .global-container .col-right .text-box::before { 
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: -4;
+    right: -60;
+    width: 10%;
+    background-color: var(--secondary-color);
+}
+
+#abt-container .global-container .col-right .text-box .abt-text { 
+    padding: 30px;
+}
+
+#abt-container .global-container .col-right .text-box .abt-text p { 
+    line-height: 2;
+    margin-bottom: 15px;
+    font-family: var(--content-font);
+    font-size: 16px;
+}
+
+#abt-container .global-container .col-right .text-box .abt-text .abt-button { 
+    padding: 20px 0;
+}
+
+#abt-container .global-container .col-right .text-box .abt-text .abt-button a { 
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--content-font);
+    letter-spacing: 2px;
+    transition: .3s all ease-in-out;
+}
+
+#abt-container .global-container .col-right .text-box .abt-text .abt-button a:hover { 
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+} 
+
+#abt-container .global-container .col-right .text-box .abt-text .abt-button i { 
+    margin-left: 3px;
+}
+
+/* skill container styling */
+
+#skill-container { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+#skill-container .global-container { 
+    display: flex;
+}
+/* skill-row styling */
+#skill-container .skill-row { 
+    width: 50%;
+    padding-right: 20px;
+}
+#skill-container .skill-row .tskill-title h1 { 
+    font-family: var(--title-font);
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: var(--text-uppercase);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#skill-container .skill-row .tskill-title h1 span { 
+    color: var(--secondary-color);
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container .skill-name { 
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--content-font);
+    text-transform: var(--text-uppercase);
+    color: var(--secondary-color);
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container .skill-name i { 
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container .skill-name span { 
+    float: right;
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container .skill-bar { 
+    width: 100%;
+    height: 14px;
+    margin: 20px 0;
+    background-color: var(--tertiary-color);
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container .skill-bar .skill-per { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: skill 2.5s ease-in-out;
+}
+
+@keyframes skill { 
+    from {width: 0;} to {width: attr(per);}
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container:first-child .skill-bar .skill-per { 
+    width: 80%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container:nth-child(2) .skill-bar .skill-per  { 
+    width: 70%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container:nth-child(3) .skill-bar .skill-per { 
+    width: 60%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+#skill-container .skill-row .t-skill-bar .progress-container:last-child .skill-bar .skill-per { 
+    width: 40%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+
+/* pskill row styling */
+#skill-container .pskill-row { 
+    width: 50%;
+    padding-left: 20px;
+}
+
+#skill-container .pskill-row .pskill-title h1 { 
+    font-family: var(--title-font);
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: var(--text-uppercase);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#skill-container .pskill-row .pskill-title h1 span { 
+    color: var(--secondary-color);
+}
+
+#skill-container .p-skill-bar .pskill-container .pskill-name { 
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--content-font);
+    text-transform: var(--text-uppercase);
+    color: var(--secondary-color);
+}
+
+#skill-container .p-skill-bar .pskill-container .pskill-name span { 
+    float: right;
+}
+
+#skill-container .pskill-row .p-skill-bar .pskill-container .pskill-bar { 
+    width: 100%;
+    height: 14px;
+    margin: 20px 0;
+    background-color: var(--tertiary-color);
+}
+
+#skill-container .pskill-row .p-skill-bar .pskill-container .pskill-bar .pskill-per { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: skill 2.5s ease-in-out;
+}
+
+@keyframes skill { 
+    from {width: 0;} to {width: attr(per);}
+}
+
+#skill-container .pskill-row .p-skill-bar .pskill-container:first-child .pskill-bar .pskill-per { 
+    width: 70%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+#skill-container .pskill-row .p-skill-bar .pskill-container:nth-child(2) .pskill-bar .pskill-per  { 
+    width: 80%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+#skill-container .pskill-row .p-skill-bar .pskill-container:nth-child(3) .pskill-bar .pskill-per { 
+    width: 80%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+#skill-container .pskill-row .p-skill-bar .pskill-container:last-child .pskill-bar .pskill-per { 
+    width: 60%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+/* My Portfolio styling */
+
+#myportfolio-container { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+#myportfolio-container .title-con {
+    width: 100%;
+
+ }
+
+ #myportfolio-container .title-con h2 { 
+    font-size: 2.4em;
+    font-weight: 900;
+    font-family: var(--title-font);
+    text-transform: var(--text-uppercase);
+    text-align: center;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+ }
+
+ #myportfolio-container .title-con h2 span { 
+    color: var(--tertiary-color);
+ }
+
+ #myportfolio-container .proj-row { 
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ #myportfolio-container .proj-row .proj-col { 
+    flex: 25%;
+    margin-top: 20px;
+    position: relative;
+    padding: 20px;
+ }
+
+
+#myportfolio-container .global-container .proj-left img {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid var(--secondary-color)
+}
+
+#myportfolio-container .proj-row .proj-col .proj-title { 
+    font-size: 20px;
+    font-weight: 800;
+    font-family: var(--content-font);
+    text-transform: var(--text-uppercase);
+    text-align: center;
+    margin-top: 30px;
+    color: var(--secondary-color);
+    letter-spacing: 3px;
+}
+
+/* contact us styling */ 
+
+#contact-container { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+#contact-container .contact-title { 
+    width: 100%;
+    font-size: 2.4em;
+    font-weight: 900;
+    font-family: var(--title-font);
+    text-transform: var(--text-uppercase);
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+#contact-container .contact-box .contact-title span {
+    color: var(--tertiary-color);
+ }
+
+ #contact-container .contact-box { 
+    width: 50%;
+    padding-right: 20px;
+    float: left;
+ }
+
+ #contact-container .contact-box form { 
+    display: flex;
+    flex-direction: column;
+ }
+
+ #contact-container .contact-box form, label { 
+    font-size: 16px;
+    font-family: var(--content-font);
+    font-family: 300;
+    letter-spacing: 2px;
+    margin: 15px 0;
+ }
+
+ #contact-container input[type=text], input[type=email], input[type=subject] ,textarea { 
+    margin-bottom: 15px;
+    padding: 15px 15px;
+ }
+
+ #contact-container .contact-box form, input[type=text], input[type=email], input[type=subject] ,textarea:focus { 
+    outline: none;
+ }
+
+ #contact-container .contact-box input[type=submit] { 
+    width: 220px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--main-color);
+    transition: .3s all ease-in-out;
+    margin-top: 15px;
+}
+
+
+#contact-container .contact-box input[type=submit]:hover { 
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+}
+
+ .contact-map { 
+    width: 50%;
+    float: right;
+    padding-left: 20px;
+ }
+
+ .contact-map .contact-img { 
+    border: 1px solid var(--secondary-color);
+    padding: 3px;
+ }
+
+ /* icon container styling */
+.contact-info { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    overflow: hidden;
+    background-color: var(--main-color);
+ }
+
+ .contact-info.p-container { 
+    padding-bottom: 40px;
+ }
+
+.contact-info .my-info  { 
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info .my-info .info-col { 
+    display: flex;
+    float: left;
+    align-items: center;
+}
+
+.contact-info .my-info .info-col:first-child { 
+    width: 35%;
+}
+
+.contact-info .my-info .info-col:nth-child(2) { 
+    width: 30%;
+}
+
+.contact-info .my-info .info-col:last-child { 
+    width: 35%;
+}
+
+.contact-info .my-info .info-col i { 
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+} 
+
+.contact-info .my-info .info-col .email, .callus-on, .location {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--content-font);
+    padding-left: 8px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+.contact-info .my-info .info-col .email, .callus-on, .location span { 
+    color: var(--tertiary-color);
+}
+
+.hr-container { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    overflow: hidden;
+    background-color: var(--main-color);
+}
+
+.hr-container.p-container { 
+    padding: 0px 60px;
+}
+
+.hr-container .global-container hr { 
+    height: 1px;
+}
+
+/* end of contact styling */
+
+
+/* footer container styling */
+
+.footer-container { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    overflow: hidden;
+    background-color: var(--main-color);
+}
+
+.footer-container.p-container { 
+    padding-top: 40px;
+}
+
+.footer-container .global-container .footer-information { 
+    display: flex;
+}
+
+
+.footer-container .footer-information .footer-abt {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.footer-container .footer-information .footer-abt .footer-title { 
+    width: 80%;
+}
+
+.footer-container .footer-information .footer-links {
+    width: 20%;
+    padding: 0 15px 0 15px;
+}
+
+.footer-container .footer-information .footer-subs {
+    width: 30%;
+    padding-left: 30px;
+}
+
+.footer-container .footer-information .footer-subs .footer-email input[type=submit] { 
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--main-color);
+    transition: .3s all ease-in-out;
+    margin-top: 5px;
+}
+
+.footer-container .footer-information .footer-subs .footer-email input[type=submit]:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+}
+    
+.footer-container .footer-logo { 
+   margin-bottom: 30px;
+}
+
+.footer-container .footer-logo a { 
+    color: var(--tertiary-color);
+    font-family: var(--content-font);
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 4px;
+}
+
+.footer-container .footer-logo span { 
+    color: var(--secondary-color);
+}
+
+.footer-container .footer-information .footer-abt .footer-title h3 { 
+    font-size: 20px;
+    font-family: var(--content-font);
+    font-weight: 900;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.footer-container .footer-information .footer-abt p { 
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--content-font);
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.footer-container .footer-information .footer-links .footer-title h3 { 
+    font-size: 20px;
+    font-family: var(--content-font);
+    font-weight: 900;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.footer-container .footer-information .footer-links a { 
+    color: var(--tertiary-color);
+}
+
+.footer-container .footer-information .footer-links li a:hover { 
+    color: var(--secondary-color);
+}
+
+
+.footer-container .footer-information .footer-links ul { 
+    line-height: 2;
+}
+
+.footer-container .footer-information .footer-links ul li { 
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--content-font);
+    word-spacing: 2px;
+}
+
+.footer-container .footer-information .footer-subs .footer-title h3 { 
+    font-size: 20px;
+    font-family: var(--content-font);
+    font-weight: 900;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+hr { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    overflow: hidden;
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
+}
+
+
+/* footer icon styling */
+
+.footer-icon { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100%;
+    overflow: hidden;
+    background-color: var(--main-color);
+}
+
+.footer-icon .ficon-container  { 
+    width: 100%;
+    text-align: center;
+}
+
+.footer-icon .ficon-container i { 
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    margin-right: 8px;
+
+}
+
+.footer-icon .footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: var(--content-font);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
